@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>{% block title %}View some epic messages!{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  {% for content in message_list %}
+  <br>
+  <b>{{content.0}}</b>
+  <br>
+  <i>{{content.1}}</i>
+  <br>
+  {% endfor %}
+{% endblock %}
